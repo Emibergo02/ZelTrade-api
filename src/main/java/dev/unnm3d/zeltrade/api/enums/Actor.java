@@ -1,4 +1,4 @@
-package dev.unnm3d.zeltrade.core.enums;
+package dev.unnm3d.zeltrade.api.enums;
 
 import lombok.Getter;
 

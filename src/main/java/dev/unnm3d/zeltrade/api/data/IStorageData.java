@@ -1,8 +1,9 @@
-package dev.unnm3d.zeltrade.data;
+package dev.unnm3d.zeltrade.api.data;
 
-import dev.unnm3d.zeltrade.core.IArchivedTrade;
-import dev.unnm3d.zeltrade.core.ITrade;
-import dev.unnm3d.zeltrade.core.enums.Actor;
+
+import dev.unnm3d.zeltrade.api.core.IArchivedTrade;
+import dev.unnm3d.zeltrade.api.core.ITrade;
+import dev.unnm3d.zeltrade.api.enums.Actor;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

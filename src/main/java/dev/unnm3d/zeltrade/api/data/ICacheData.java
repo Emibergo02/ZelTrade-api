@@ -1,14 +1,12 @@
-package dev.unnm3d.zeltrade.data;
+package dev.unnm3d.zeltrade.api.data;
 
 
-import dev.unnm3d.zeltrade.core.ITrade;
-import dev.unnm3d.zeltrade.core.enums.ViewerUpdate;
-import lombok.NonNull;
+import dev.unnm3d.zeltrade.api.core.ITrade;
+import dev.unnm3d.zeltrade.api.enums.ViewerUpdate;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
 public interface ICacheData<T extends ITrade> {

@@ -1,8 +1,8 @@
-package dev.unnm3d.zeltrade.core;
+package dev.unnm3d.zeltrade.api.core;
 
-import dev.unnm3d.zeltrade.core.enums.Actor;
-import dev.unnm3d.zeltrade.core.enums.Status;
-import dev.unnm3d.zeltrade.core.enums.StatusActor;
+import dev.unnm3d.zeltrade.api.enums.Actor;
+import dev.unnm3d.zeltrade.api.enums.Status;
+import dev.unnm3d.zeltrade.api.enums.StatusActor;
 
 import java.util.UUID;
 import java.util.concurrent.CompletionStage;

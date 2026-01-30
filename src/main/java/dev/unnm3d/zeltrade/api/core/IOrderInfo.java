@@ -1,7 +1,7 @@
-package dev.unnm3d.zeltrade.core;
+package dev.unnm3d.zeltrade.api.core;
 
 
-import dev.unnm3d.zeltrade.core.enums.Status;
+import dev.unnm3d.zeltrade.api.enums.Status;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;

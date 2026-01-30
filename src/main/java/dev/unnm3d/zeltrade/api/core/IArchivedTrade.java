@@ -1,4 +1,4 @@
-package dev.unnm3d.zeltrade.core;
+package dev.unnm3d.zeltrade.api.core;
 
 import java.util.Date;
 

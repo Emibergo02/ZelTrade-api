@@ -1,9 +1,8 @@
-package dev.unnm3d.zeltrade.core;
+package dev.unnm3d.zeltrade.api.core;
 
-import dev.unnm3d.zeltrade.core.enums.Status;
-import dev.unnm3d.zeltrade.core.enums.TradeViewType;
+import dev.unnm3d.zeltrade.api.enums.Status;
+import dev.unnm3d.zeltrade.api.enums.TradeViewType;
 
-import java.util.Optional;
 import java.util.UUID;
 
 public interface ITradeSide {

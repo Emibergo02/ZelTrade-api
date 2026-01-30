@@ -1,4 +1,4 @@
-package dev.unnm3d.zeltrade.data;
+package dev.unnm3d.zeltrade.api.data;
 
 public record MeanRating(String playerName, double mean, int countedTrades) {
     public static MeanRating empty() {

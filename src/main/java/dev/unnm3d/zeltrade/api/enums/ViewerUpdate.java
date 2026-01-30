@@ -1,10 +1,10 @@
-package dev.unnm3d.zeltrade.core.enums;
+package dev.unnm3d.zeltrade.api.enums;
 
 import lombok.Getter;
 
 @Getter
 public enum ViewerUpdate {
-    TRADE_CREATE('0', dev.unnm3d.zeltrade.core.enums.Actor.SPECTATOR, UpdateType.CREATE),
+    TRADE_CREATE('0', Actor.SPECTATOR, UpdateType.CREATE),
 
     TRADER_WINDOW('1', Actor.TRADER, UpdateType.WINDOW),
     TRADER_PRICE('3', Actor.TRADER, UpdateType.PRICE),
