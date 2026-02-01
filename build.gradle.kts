@@ -1,7 +1,3 @@
-plugins {
-    id("java-library")
-}
-
 dependencies {
     compileOnly("org.projectlombok:lombok:1.18.34")
     compileOnly("org.jetbrains:annotations:24.0.1")
