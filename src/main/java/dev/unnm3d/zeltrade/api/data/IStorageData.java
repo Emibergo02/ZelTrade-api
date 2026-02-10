@@ -39,7 +39,7 @@ public interface IStorageData<T extends ITrade> {
      * @param trade the trade to archive
      * @return true if the trade was archived successfully
      */
-     default CompletableFuture<@Nullable IArchivedTrade> archiveTrade(@NotNull T trade) {
+     default CompletableFuture<@Nullable IArchivedTrade<T>> archiveTrade(@NotNull T trade) {
         return CompletableFuture.completedFuture(null);
     }
 
@@ -52,11 +52,11 @@ public interface IStorageData<T extends ITrade> {
      * @param endTimestamp   the end timestamp
      * @return a map of timestamps and trades
      */
-    default CompletableFuture<List<IArchivedTrade>> getArchivedTrades(@NotNull UUID playerUUID, @NotNull LocalDateTime startTimestamp, @NotNull LocalDateTime endTimestamp) {
+    default CompletableFuture<List<IArchivedTrade<T>>> getArchivedTrades(@NotNull UUID playerUUID, @NotNull LocalDateTime startTimestamp, @NotNull LocalDateTime endTimestamp) {
         return CompletableFuture.completedFuture(new ArrayList<>());
     }
 
-    default CompletableFuture<Optional<IArchivedTrade>> getArchivedTrade(@NotNull UUID tradeUUID) {
+    default CompletableFuture<Optional<IArchivedTrade<T>>> getArchivedTrade(@NotNull UUID tradeUUID) {
         return CompletableFuture.completedFuture(Optional.empty());
     }
 
