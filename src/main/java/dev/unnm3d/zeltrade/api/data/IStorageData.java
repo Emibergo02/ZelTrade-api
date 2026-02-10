@@ -4,6 +4,7 @@ package dev.unnm3d.zeltrade.api.data;
 import dev.unnm3d.zeltrade.api.core.IArchivedTrade;
 import dev.unnm3d.zeltrade.api.core.ITrade;
 import dev.unnm3d.zeltrade.api.enums.Actor;
+import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -13,18 +14,22 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
 public interface IStorageData<T extends ITrade> {
+    @ApiStatus.Internal
     void backupTrade(@NotNull T trade);
 
     void removeTradeBackup(@NotNull UUID tradeUUID);
 
+    @ApiStatus.Internal
     void updateStoragePlayerList(@NotNull String playerName, @NotNull UUID playerUUID);
 
     void ignorePlayer(@NotNull String playerName, @NotNull String targetName, boolean ignore);
 
     void rateTrade(@NotNull UUID archivedTradeUUID, @NotNull Actor actor, int rating);
 
+    @ApiStatus.Internal
     CompletionStage<Map<Integer, T>> restoreTrades();
 
+    @ApiStatus.Internal
     CompletionStage<Map<String, UUID>> loadNameUUIDs();
 
     CompletionStage<Set<String>> getIgnoredPlayers(@NotNull String playerName);
@@ -37,7 +42,7 @@ public interface IStorageData<T extends ITrade> {
      * Archive a trade, not available for REDIS storage type
      *
      * @param trade the trade to archive
-     * @return true if the trade was archived successfully
+     * @return The archived trade, or null if the trade could not be archived (e.g. if the storage type does not support archiving)
      */
      default CompletableFuture<@Nullable IArchivedTrade<T>> archiveTrade(@NotNull T trade) {
         return CompletableFuture.completedFuture(null);
