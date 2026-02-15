@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.concurrent.CompletionStage;
+import java.util.concurrent.CompletableFuture;
 
 public interface ICacheData<T extends ITrade> {
 
@@ -23,7 +23,7 @@ public interface ICacheData<T extends ITrade> {
      * @param value     the value to update
      * @return the number of subscribers that received the message
      */
-    CompletionStage<Long> updateTrade(UUID tradeUUID, ViewerUpdate type, Object value);
+    CompletableFuture<Long> updateTrade(UUID tradeUUID, ViewerUpdate type, Object value);
 
     /**
      * Broadcast a full trade to all servers in the network
@@ -31,7 +31,7 @@ public interface ICacheData<T extends ITrade> {
      * @param trade the trade to broadcast
      * @return the number of subscribers that received the message
      */
-    CompletionStage<Long> sendFullTrade(T trade);
+    CompletableFuture<Long> sendFullTrade(T trade);
 
     /**
      * Send a trade invite to other servers
