@@ -65,6 +65,10 @@ public interface IStorageData<T extends ITrade> {
         return CompletableFuture.completedFuture(Optional.empty());
     }
 
+    default CompletableFuture<Integer> archivedTradesCount() {
+        return CompletableFuture.completedFuture(0);
+    }
+
     default void wipeArchivedTrades(){}
 
     void close();

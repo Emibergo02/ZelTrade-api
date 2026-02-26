@@ -14,6 +14,7 @@ public interface ZelTradeAPI<T extends ITrade> {
     <V extends IInviteManager> V getInviteManager();
     <V extends IIgnoreManager> V getIgnoreManager();
     <V extends ITradeManager<T>> V getTradeManager();
+    VanishManager getVanishManager();
 
     /**
      * Get ZelTrade API instance
