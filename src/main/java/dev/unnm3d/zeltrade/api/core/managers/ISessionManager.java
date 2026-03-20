@@ -29,5 +29,5 @@ public interface ISessionManager<T extends ITrade> {
      *
      * @param playerUUID The UUID of the player to close the session for.
      */
-    void closePlayerSession(UUID playerUUID);
+    void closePlayerSession(UUID playerUUID, T trade);
 }
